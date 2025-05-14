@@ -6,13 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    
+
     <script>
       // https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite
       if (
@@ -264,49 +277,56 @@
               class="bg-white py-3 px-10 rounded-2xl text-darkBlue1 w-full"
             />
           </div>
-          <button class="bg-accentCyan rounded-2xl p-3 px-6">
+          <button class="bg-accentCyan rounded-2xl p-3 px-6 hover:scale-95">
             Get started for Free
           </button>
         </div>
       </div>
     </section>
     <!-- footer -->
-    <footer
-      id="footer"
-      class=" bg-darkBlue2"
-    >
+    <footer id="footer" class="bg-darkBlue2">
       <!-- footer container -->
-       <div class="container mx-auto p-10 flex flex-col 
-       space-y-8 md:flex-row items-start justify-between 
-       pb-20 md:items-center text-white">
-      <!-- col 1 -->
-      <div class="flex flex-col space-y-8 ">
-        <div class="flex space-x-4 items-center">
-          <img src="/images/icon-phone.svg" class="h-4" alt="" />
-          <p>+93 782 77 6766</p>
+      <div
+        class="container mx-auto p-10 flex flex-col space-y-8 md:flex-row items-start justify-between pb-20 md:items-center text-white"
+      >
+        <!-- col 1 -->
+        <div class="flex flex-col space-y-8">
+          <div class="flex space-x-4 items-center">
+            <img src="/images/icon-phone.svg" class="h-4" alt="" />
+            <p>+93 782 776 6766</p>
+          </div>
+          <div class="flex space-x-4 items-center">
+            <img src="/images/icon-email.svg" class="h-4" alt="" />
+            <p>nazirsherzad12345@gmail.com</p>
+          </div>
         </div>
-        <div class="flex space-x-4 items-center">
-          <img src="/images/icon-email.svg" class="h-4" alt="" />
-          <p>nazirsherzad12345@gmail.com</p>
+        <div class="flex flex-col space-y-8">
+          <p>About us</p>
+          <p>Jobs</p>
+          <p>Press</p>
+          <p>Blog</p>
+        </div>
+        <div class="flex flex-col space-y-8">
+          <p>contact us</p>
+          <p>terms</p>
+          <p>Privcy</p>
+        </div>
+        <div class="flex space-x-8 self-center md:self-start">
+          <a href="https://www.facebook.com/share/18a8YAY9Pb/?mibextid=wwXIfr"
+            ><img src="/images/facebook.svg" alt=""
+          /></a>
+          <a
+            href="https://www.instagram.com/na_zir_1?igsh=MTI3OGl1ZzR3Z210cw%3D%3D&utm_source=qr"
+            ><img src="/images/instagram.svg" alt=""
+          /></a>
+          <a href="https://wa.link/gijp45"
+            ><ion-icon
+              name="logo-whatsapp"
+              style="font-size: 24px; font-weight: 900; margin-top: 3px"
+            ></ion-icon
+          ></a>
         </div>
       </div>
-      <div class="flex flex-col space-y-8">
-        <p>About us</p>
-        <p>Jobs</p>
-        <p>Press</p>
-        <p>Blog</p>
-      </div>
-      <div class="flex flex-col space-y-8">
-        <p>contact us</p>
-        <p>terms</p>
-        <p>Privcy</p>
-      </div>
-      <div class="flex space-x-8 self-center md:self-start">
-        <img src="/images/facebook.svg" alt="">
-        <img src="/images/twitter.svg" alt="">
-        <img src="/images/instagram.svg" alt="">
-      </div>
-    </div>
     </footer>
   </body>
 </html>
