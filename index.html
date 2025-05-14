@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <script>
+      // https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+
+    <script src="js/script.js" defer></script>
+    <title>Fylo Website</title>
+  </head>
+  <body class="dark:bg-darkBlue dark:text-white font-opensans">
+    <!-- header container -->
+    <header class="container mx-auto mt-10 px-6 h-40 md:-h-20">
+      <!-- Logo -->
+      <div
+        class="bg-logo-light-mode dark:bg-logo-dark-mode h-20 w-48 bg-no-repeat mx-auto md:absolute top10 left-10 md:mx-0"
+      ></div>
+      <!-- menu  -->
+      <div
+        class="flex items-center justify-center text-xs space-x-4 md:space-x-10 md:absolute top-12 right-10 md:text-lg"
+      >
+        <a href="#futures" class="hover:text-accentCyan">Futures</a>
+        <a href="#testimonial" class="hover:text-accentCyan">Testimonials</a>
+        <button
+          id="theme-toggle"
+          class="focus:outline-none focus:ring-4 text-gray-500 dark:text-gray-400 hover:bg-gray-100 focus:ring-gray-200 dark:hover:bg-gray-700 text-sm rounded-lg p-2.5"
+        >
+          <!-- Dark SVG Icon -->
+          <svg
+            id="theme-toggle-dark-icon"
+            class="w-5 h-5 hidden"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            ></path>
+          </svg>
+          <!-- Light SVG Icon -->
+          <svg
+            id="theme-toggle-light-icon"
+            class="w-5 h-5 hidden"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!-- section hero -->
+    <section
+      id="hero"
+      class="w-full mx-auto bg-curvy-light-mode text-center dark:bg-curvy-dark-mode bg-contain bg-no-repeat bg-bottom"
+    >
+      <!-- hero container -->
+      <div class="container mx-auto px-6 text-center md:pt-20 pb-52">
+        <img src="/images/illustration-intro.png" class="inline" alt="" />
+        <h1 class="max-w-2xl text-3xl font-bold mx-auto mt-14 md:text-4xl">
+          All your files in one secure location accessable anywhere
+        </h1>
+        <p class="max-w-sm text-sm mx-auto mt-10 md:text-lg md:max-w-xl">
+          Fylo stores all your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends
+          family, and co-workers.
+        </p>
+        <button
+          class="mx-auto mt-10 bg-accentCyan p-3 w-52 rounded-full text-xl hover:scale-95"
+        >
+          Get started
+        </button>
+      </div>
+    </section>
+    <!-- futures section -->
+    <section id="futures">
+      <!-- section container -->
+      <div
+        class="container mx-auto mt-38 grid grid-cols-1 md:grid-cols-2 px-10 mb-52 space-y-20"
+      >
+        <!-- items one -->
+        <div class="flex flex-col space-y-5 items-center mt-20 justify-center">
+          <img src="/images/icon-access-anywhere.svg" class="" alt="" />
+          <h1 class="text-xl font-bold">Access your files from anywhere</h1>
+          <p class="text-center max-w-sm">
+            The ability to use a smartphone, tablet, or computer to access your
+            account means your files follow you everywhere.
+          </p>
+        </div>
+        <!-- items tow -->
+        <div class="flex flex-col space-y-5 items-center justify-center">
+          <img src="/images/icon-security.svg" class="" alt="" />
+          <h1 class="text-xl font-bold">Security you can trust</h1>
+          <p class="text-center max-w-sm">
+            2-factor authentication and user-controlled encryption are just a
+            couple of the security features we allow to help secure your files.
+          </p>
+        </div>
+        <!-- items three -->
+        <div class="flex flex-col space-y-5 items-center justify-center">
+          <img src="/images/icon-collaboration.svg" class="" alt="" />
+          <h1 class="text-xl font-bold">Security you can trust</h1>
+          <p class="text-center max-w-sm">
+            2-factor authentication and user-controlled encryption are just a
+            couple of the security features we allow to help secure your files.
+          </p>
+        </div>
+        <!-- items four -->
+        <div class="flex flex-col space-y-5 items-center justify-center">
+          <img src="/images/icon-any-file.svg" class="" alt="" />
+          <h1 class="text-xl font-bold">Access your files from anywhere</h1>
+          <p class="text-center max-w-sm">
+            The ability to use a smartphone, tablet, or computer to access your
+            account means your files follow you everywhere.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- section stay productive -->
+    <section id="stay-productive" class="bg-white dark:bg-darkBlue1 mb-24">
+      <!-- image container -->
+      <div
+        class="container flex flex-col mx-auto justify-center items-start md:flex-row p-4"
+      >
+        <img
+          src="/images/illustration-stay-productive.png"
+          class="md:w-1/2 mb-20"
+          alt=""
+        />
+        <div class="flex flex-col space-y-4 text-left md:w-1/2 md:space-y-5">
+          <h3 class="text-2xl font-bold mb-3 md:text-3xl">
+            Stay productive, wherever you are
+          </h3>
+          <p class="text-sm md:text-xl">
+            Never let location be an issue when accessing your files. Fylo has
+            you covered for all of your file storage needs.
+          </p>
+          <p class="mt-4 text-sm md:text-xl">
+            Securely share files and folders with friends, family and colleagues
+            for live collaboration. No email attachments required.
+          </p>
+          <div class="link">
+            <a
+              href=""
+              class="text-accentCyan text-lg border-b pb-0.5 border-accentCyan"
+              >See how Flyo works
+              <img src="/images/icon-arrow.svg" class="inline ml-2" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testimonial" class="pb-32">
+      <!-- section container -->
+      <div
+        class="relative w-full items-center justify-center mx-auto md:space-x-10 flex flex-col md:flex-row space-y-4 p-4 pb-38 mb-20"
+      >
+        <!-- image container -->
+        <div class="absolute -top-5 left-4">
+          <img src="/images/bg-quotes.png" alt="" />
+        </div>
+        <!-- person 1 -->
+        <div
+          class="max-w-lg flex flex-col bg-gray-200 space-y-6 dark:bg-darkBlue3 rounded-lg p-8"
+        >
+          <p>
+            Fylo has improved our team productivity by an order of magnitude.
+            Since making the switch our team has become a well-oiled
+            collaboration machine.
+          </p>
+          <div class="flex justify-start items-center space-x-3">
+            <img src="/images/profile-1.jpg" class="rounded-full w-12" alt="" />
+
+            <div class="flex flex-col space-y-1">
+              <h1 class="font-bold text-lg">Satish Patel</h1>
+              <p>Founder & CEO. Huddle</p>
+            </div>
+          </div>
+        </div>
+        <!-- person 2 -->
+        <div
+          class="max-w-lg flex flex-col bg-gray-200 rounded-lg space-y-6 dark:bg-darkBlue3 p-8"
+        >
+          <p>
+            Fylo has improved our team productivity by an order of magnitude.
+            Since making the switch our team has become a well-oiled
+            collaboration machine.
+          </p>
+          <div class="flex justify-start items-center space-x-3">
+            <img src="/images/profile-2.jpg" class="rounded-full w-12" alt="" />
+
+            <div class="flex flex-col space-y-1">
+              <h1 class="font-bold text-lg">Bruce McKenzie</h1>
+              <p>Founder & CEO. Huddle 2</p>
+            </div>
+          </div>
+        </div>
+        <!-- person 3 -->
+        <div
+          class="max-w-lg flex flex-col bg-gray-200 rounded-lg space-y-6 dark:bg-darkBlue3 p-8"
+        >
+          <p>
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+          <div class="flex justify-start items-center space-x-3">
+            <img src="/images/profile-3.jpg" class="rounded-full w-12" alt="" />
+
+            <div class="flex flex-col space-y-1">
+              <h1 class="font-bold text-lg">Eva Boyd</h1>
+              <p>Founder & CEO. Huddle 3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section early -->
+    <section id="early-access" class="relative dark:bg-darkBlue2 px-6 md:px-0">
+      <div
+        class="relative -top-40 max-w-4xl mx-auto rounded-lg p-10 px-6 text-center space-y-6 bg-gray-200 dark:bg-darkBlue1 md:px-16"
+      >
+        <!-- form -->
+        <h1 class="text-2xl font-bold">Get early access today</h1>
+        <p class="text-sm">
+          It only takes a minute to sign up and our free starter tier is
+          extremely generous. If you have any questions, our support team would
+          be happy to help you.
+        </p>
+        <!-- input -->
+        <div
+          class="flex flex-col md:flex-row space-y-6 mt-20 md:space-x-6 md:items-start md:space-y-0"
+        >
+          <div class="w-full flex-1">
+            <input
+              type="email"
+              placeholder="example@email.com"
+              class="bg-white py-3 px-10 rounded-2xl text-slate-50 w-full"
+            />
+          </div>
+          <button class="bg-accentCyan rounded-2xl p-3 px-6">
+            Get started for Free
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer
+      id="footer"
+      class=" bg-darkBlue2"
+    >
+      <!-- footer container -->
+       <div class="container mx-auto p-10 flex flex-col 
+       space-y-8 md:flex-row items-start justify-between 
+       pb-20 md:items-center text-white">
+      <!-- col 1 -->
+      <div class="flex flex-col space-y-8 ">
+        <div class="flex space-x-4 items-center">
+          <img src="/images/icon-phone.svg" class="h-4" alt="" />
+          <p>+93 782 776 6766</p>
+        </div>
+        <div class="flex space-x-4 items-center">
+          <img src="/images/icon-email.svg" class="h-4" alt="" />
+          <p>nazirsherzad12345@gmail.com</p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-8">
+        <p>About us</p>
+        <p>Jobs</p>
+        <p>Press</p>
+        <p>Blog</p>
+      </div>
+      <div class="flex flex-col space-y-8">
+        <p>contact us</p>
+        <p>terms</p>
+        <p>Privcy</p>
+      </div>
+      <div class="flex space-x-8 self-center md:self-start">
+        <img src="/images/facebook.svg" alt="">
+        <img src="/images/twitter.svg" alt="">
+        <img src="/images/instagram.svg" alt="">
+      </div>
+    </div>
+    </footer>
+  </body>
+</html>
